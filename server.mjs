@@ -44,5 +44,5 @@ createServer((request, response) => {
   });
   createReadStream(filePath).pipe(response);
 }).listen(port, host, () => {
-  console.log(`Jessie Hanna Services listening on http://${host}:${port}`);
+  console.log(`Sweeping Beauty listening on http://${host}:${port}`);
 });

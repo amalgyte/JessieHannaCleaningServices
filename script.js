@@ -1,9 +1,9 @@
 const themeSelect = document.querySelector("#themeSelect");
-const savedTheme = localStorage.getItem("jessie-hanna-theme") || "mint";
+const savedTheme = localStorage.getItem("sweeping-beauty-theme") || "rose";
 
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
-  localStorage.setItem("jessie-hanna-theme", theme);
+  localStorage.setItem("sweeping-beauty-theme", theme);
 }
 
 themeSelect.value = savedTheme;
