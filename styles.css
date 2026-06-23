@@ -462,9 +462,13 @@ h3 {
 }
 
 .featured-card p,
-.featured-card .icon-tile,
 .featured-card .service-rate {
   color: color-mix(in srgb, #ffffff 82%, var(--accent));
+}
+
+.featured-card .icon-tile {
+  background: color-mix(in srgb, #ffffff 88%, var(--accent));
+  color: var(--primary-dark);
 }
 
 .icon-tile {
@@ -702,20 +706,6 @@ h3 {
 .form-section-header {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-}
-
-.form-section-header > span {
-  display: grid;
-  width: 2.15rem;
-  height: 2.15rem;
-  flex: 0 0 auto;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--accent-soft);
-  color: var(--primary-dark);
-  font-size: 0.78rem;
-  font-weight: 800;
 }
 
 .form-section-header h3 {
