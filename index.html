@@ -179,9 +179,90 @@
           </ul>
         </article>
       </section>
+
+      <section id="contact" class="booking section-shell">
+        <div class="booking-copy">
+          <p class="eyebrow">Book a clean</p>
+          <h2>Tell us what the space needs.</h2>
+          <p>
+            Share the number of beds and baths, the areas that need extra
+            attention, and your product preferences. Sweeping Beauty supplies
+            cleaning products and tools, but clients must provide a vacuum to
+            reduce cross-contamination risks between homes.
+          </p>
+        </div>
+
+        <form class="booking-form">
+          <div class="field-grid">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              <span>Bedrooms</span>
+              <select name="bedrooms" required>
+                <option value="">Select</option>
+                <option>Studio / bachelor</option>
+                <option>1 bedroom</option>
+                <option>2 bedrooms</option>
+                <option>3 bedrooms</option>
+                <option>4+ bedrooms</option>
+              </select>
+            </label>
+            <label>
+              <span>Bathrooms</span>
+              <select name="bathrooms" required>
+                <option value="">Select</option>
+                <option>1 bathroom</option>
+                <option>2 bathrooms</option>
+                <option>3 bathrooms</option>
+                <option>4+ bathrooms</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>Focus areas</legend>
+            <div class="choice-grid">
+              <label><input type="checkbox" name="focus" value="kitchen" /> Kitchen</label>
+              <label><input type="checkbox" name="focus" value="bathrooms" /> Bathrooms</label>
+              <label><input type="checkbox" name="focus" value="floors" /> Floors</label>
+              <label><input type="checkbox" name="focus" value="dusting" /> Dusting</label>
+              <label><input type="checkbox" name="focus" value="baseboards" /> Baseboards</label>
+              <label><input type="checkbox" name="focus" value="appliances" /> Appliances</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Product preference</legend>
+            <div class="choice-grid product-options">
+              <label><input type="radio" name="products" value="eco" required /> Eco-friendly products</label>
+              <label><input type="radio" name="products" value="standard" /> Standard products are okay</label>
+              <label><input type="radio" name="products" value="bleach" /> Bleach is okay where needed</label>
+            </div>
+          </fieldset>
+
+          <label class="notes-field">
+            <span>Anything else?</span>
+            <textarea name="notes" rows="4" placeholder="Access notes, pets, timing preferences, or other priorities"></textarea>
+          </label>
+
+          <label class="vacuum-check">
+            <input type="checkbox" name="vacuum" required />
+            <span>I understand I need to provide a vacuum for the appointment.</span>
+          </label>
+
+          <button class="button" type="submit">Request Booking</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
     </main>
 
-    <footer id="contact" class="site-footer">
+    <footer class="site-footer">
       <div>
         <a class="brand footer-brand" href="#top" aria-label="Sweeping Beauty home">
           <span class="brand-mark">SB</span>

@@ -13,14 +13,30 @@ themeSelect.addEventListener("change", (event) => {
   applyTheme(event.target.value);
 });
 
-document.querySelector(".contact-form").addEventListener("submit", (event) => {
+const contactForm = document.querySelector(".contact-form");
+const bookingForm = document.querySelector(".booking-form");
+
+contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const input = event.currentTarget.querySelector("input");
 
-  if (!input.value.trim()) {
+  if (input.value.trim()) {
+    event.currentTarget.reset();
+  } else {
     input.focus();
+  }
+});
+
+bookingForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const status = form.querySelector(".form-status");
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
     return;
   }
 
-  event.currentTarget.reset();
+  form.reset();
+  status.textContent = "Thanks. Your booking details are ready to send.";
 });
